@@ -1,0 +1,7 @@
+/* leetcode - 183 customer who never order */
+
+SELECT c.name AS Customers 
+FROM Customers c
+LEFT JOIN Orders o
+ON c.id = o.customerId
+WHERE o.id IS NULL;
